@@ -119,8 +119,13 @@ $(function(){
 });
 
 //Navbar Collapse
-$('.nav-link').on('click', function(){
+/*$('.nav-link').on('click', function(){
     $('.navbar-collapse').collapse('hide');
+});*/
+document.querySelectorAll('.nav-item').forEach(el => {
+    el.addEventListener('click', ()=> {
+        document.querySelector('.navbar-collapse').classList.remove('show')
+    })
 });
 
 //Toggle Theme
